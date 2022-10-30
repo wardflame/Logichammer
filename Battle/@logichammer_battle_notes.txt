@@ -1,0 +1,182 @@
+// v0.0.0.1
+[NEW TABLES]
+>> db
+	- kv_fatigue
+	- kv_rules
+	- battle_entities
+	- land_units
+	- main_units
+	- melee_weapons
+	- missile_weapons
+	- missile_weapons_to_projectiles_tables
+	- mounts_tables
+	- projectiles_tables
+	- special_ability_phase_stat_effects_tables
+	- ui_unit_bullet_point_enums_tables
+	- ui_unit_bullet_point_unit_overrides_tables
+	- unit_armour_types
+	- unit_missile_weapon_junctions
+	- unit_shield_types
+	
+>> text
+	- ui_unit_bullet_point_enums__.loc
+
+[CHANGES]
+---------------- db ----------------
+>> kv_rules
+* armour_roll_lower_cap: 0.9 (was 0.5)
+
+>> kv_fatigue
+* values * 2
+threshold_exhausted
+threshold_max
+threshold_tired
+threshold_very_tired
+threshold_winded
+
+>> battle_entities
+* new entries:
+lh_human
+lh_ksl_frost_maiden
+
+>> land_units
+* man entity: lh_human
+wh3_main_ksl_cha_boris_0
+wh3_main_ksl_cha_boyar_0
+wh3_main_ksl_cha_kostaltyn_0
+wh3_main_ksl_cha_patriarch_0
+wh3_main_ksl_inf_armoured_kossars_0
+wh3_main_ksl_inf_armoured_kossars_1
+wh3_main_ksl_inf_ice_guard_0
+wh3_main_ksl_inf_ice_guard_1
+wh3_main_ksl_inf_kossars_0
+wh3_main_ksl_inf_kossars_1
+wh3_main_ksl_inf_streltsi_0
+wh3_main_ksl_inf_tzar_guard_0
+wh3_main_ksl_inf_tzar_guard_1
+wh3_twa06_ksl_inf_tzar_guard_ror_0
+
+* man entity: lh_ksl_frost_maiden
+wh3_main_ksl_cha_frost_maiden_ice_0
+wh3_main_ksl_cha_frost_maiden_tempest_0
+wh3_main_ksl_cha_ice_witch_ice_0
+wh3_main_ksl_cha_ice_witch_tempest_0
+wh3_main_ksl_cha_katarin_0
+
+* bonus hp: 0
+wh3_main_ksl_inf_armoured_kossars_0
+wh3_main_ksl_inf_armoured_kossars_1
+wh3_main_ksl_inf_ice_guard_0
+wh3_main_ksl_inf_ice_guard_1
+wh3_main_ksl_inf_kossars_0
+wh3_main_ksl_inf_kossars_1
+wh3_main_ksl_inf_streltsi_0
+wh3_main_ksl_inf_tzar_guard_0
+wh3_main_ksl_inf_tzar_guard_1
+wh3_twa06_ksl_inf_tzar_guard_ror_0
+
+* bonus hp:
+wh3_main_ksl_cha_boris_0 					> 6700
+wh3_main_ksl_cha_boyar_0 					> 5900
+wh3_main_ksl_cha_frost_maiden_ice_0			> 4700
+wh3_main_ksl_cha_frost_maiden_tempest_0		> 4700
+wh3_main_ksl_cha_ice_witch_ice_0			> 4300
+wh3_main_ksl_cha_ice_witch_tempest_0		> 4300
+wh3_main_ksl_cha_katarin_0					> 5500
+wh3_main_ksl_cha_kostaltyn_0				> 5700
+wh3_main_ksl_cha_patriarch_0				> 5100
+
+
+* armour:
+lh_ksl_scale
+	- wh3_main_ksl_inf_armoured_kossars_0
+	- wh3_main_ksl_inf_armoured_kossars_1
+
+lh_ksl_scale_cloaked
+	- wh3_main_ksl_inf_tzar_guard_0
+	- wh3_main_ksl_inf_tzar_guard_1
+	- wh3_twa06_ksl_inf_tzar_guard_ror_0
+
+lh_ksl_halfplate
+	- wh3_main_ksl_inf_ice_guard_0
+	- wh3_main_ksl_inf_ice_guard_1
+
+lh_ksl_leather_kossar
+	- wh3_main_ksl_inf_kossars_0
+	- wh3_main_ksl_inf_kossars_1
+
+lh_ksl_leather_streltsi
+	- wh3_main_ksl_inf_streltsi_0
+
+* shield: lh_ksl_shield
+wh3_main_ksl_inf_armoured_kossars_0
+wh3_main_ksl_inf_tzar_guard_0
+
+* primary melee weapon:
+lh_ksl_axe_1h
+	- wh3_main_ksl_inf_armoured_kossars_0
+	- wh3_main_ksl_inf_kossars_0
+
+lh_ksl_sabre_1h_tzar
+	- wh3_main_ksl_inf_tzar_guard_0
+
+lh_ksl_greatsabre_2h
+	- wh3_main_ksl_inf_tzar_guard_1
+
+lh_ksl_greatsabre_2h_tzarror
+	- wh3_twa06_ksl_inf_tzar_guard_ror_0
+	
+lh_ksl_greatmace_2h
+	- wh3_main_ksl_inf_armoured_kossars_1
+
+lh_ksl_gunaxe_2h
+	- wh3_main_ksl_inf_streltsi_0
+
+>> melee_weapons
+* new entries:
+lh_ksl_axe_1h
+lh_ksl_sabre_1h_tzar
+lh_ksl_sword_1h_iceguard
+lh_ksl_glaive_2h_iceguard
+lh_ksl_spear_2h
+lh_ksl_greatsabre_2h_tzar
+lh_ksl_greatsabre_2h_tzarror
+lh_ksl_greatmace_2h
+lh_ksl_gunaxe_2h
+
+>> special_ability_phase_stat_effects
+* new entries:
+lh_suppression: 0.9 scalar_speed (mult)
+wh_dlc08_unit_contact_frostbite: -10 stat_melee_attack (add)
+wh_dlc08_unit_contact_frostbite: -10 stat_melee_defence (add)
+
+>> special_ability_phases
+* new entries:
+lh_suppression
+
+>> ui_unit_bullet_point_enums_tables
+* new entry: lh_aoe_attacker
+
+>> ui_unit_bullet_point_unit_overrides_tables
+* new entry:
+wh3_main_ksl_inf_streltsi_0: lh_aoe_attacker
+wh3_main_ksl_inf_streltsi_0: armour_sundering
+
+>> unit_armour_types
+* new entries:
+lh_ksl_plate
+lh_ksl_scale
+lh_ksl_scale_cloaked
+lh_ksl_scale_lancers
+lh_ksl_halfplate
+lh_ksl_leather_streltsi
+lh_ksl_leather_kossar
+
+>> unit_shield_types
+* new entry: lh_ksl_shield
+
+---------------- text ----------------
+>> ui_unit_bullet_point_enums__.loc
+* new entries:
+ui_unit_bullet_point_enums_onscreen_name_lh_aoe_attacker
+ui_unit_bullet_point_enums_tooltip_lh_aoe_attacker

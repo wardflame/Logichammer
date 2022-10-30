@@ -1,0 +1,82 @@
+Logichammer: Statecraft Notes | 07/05/2022 | scehr
+
+-- By using an existing key from // building_units_allowed_tables //, one can replace existing build chain units. This has been used to replace the Kislev military building units and put them into the new Ungol settlement chain.
+
+-- // effect_bonus_value_ids_unit_sets_tables // is used to give effects to a collection of units. For example, it's used to give recruitment ranks to Kislev cavalry as a set.
+
+-- // effect_bonus_value_basic_junction_tables // provides recruit stat increases (seems like % based).
+
+ALL EFFECT BONUS VALUE IDS
+
+[RECRUITMENT]
+cost_mod
+global_recruit_time_mod
+recruit_time_mod
+unit_xp_mod
+unit_stat_bonus_accuracy_mod
+unit_stat_bonus_ammunition
+unit_stat_bonus_armour
+unit_stat_bonus_attack
+unit_stat_bonus_charge_bonus_mod
+unit_stat_bonus_defence (% modifier)
+unit_stat_bonus_horses
+unit_stat_bonus_hull_armour
+unit_stat_bonus_hull_health
+unit_stat_bonus_morale_mod
+unit_stat_bonus_ramming
+unit_stat_bonus_shield
+unit_stat_bonus_weapon
+
+[NONE RECRUITMENT]
+ammo_mod
+armour_mod
+armour_mod_mult
+battle_barrier_health
+battle_barrier_health_mod
+battle_barrier_replenish_delay_mod
+battle_barrier_replenish_rate_mod
+charge_add
+charge_bonus
+combat_potential_melee
+combat_potential_melee_mod
+combat_potential_ranged
+combat_potential_ranged_mod
+damage_vs_infantry
+damage_vs_large_entities
+faction_mercenary_cap_mod
+food_cost_mod
+general_aoe_mod
+general_aoe_morale_effect_mod
+melee_attack_mod
+melee_attack_mod_mult
+melee_damage_ap_mod_add
+melee_damage_ap_mod_mult
+melee_damage_mod_add
+melee_damage_mod_mult
+melee_defence_mod
+mercenary_cost_mod
+mercenary_unit_xp_mod
+minimum_xp_gain_from_eligible_battle
+miscast_chance_mod
+missile_damage_ap_mod_add
+missile_damage_mod_mult
+mod_land_movement_battle
+morale
+no_upkeep
+range_mod
+reload
+replenishment_percentage_bonus
+splash_attack_power_mod_add
+unit_cap
+unit_damage_resistance_all_mod
+unit_damage_resistance_flame_mod
+unit_damage_resistance_magic_mod
+unit_damage_resistance_missile_mod
+unit_damage_resistance_physical_mod
+unit_fatigue_resistance_mod
+unit_flaming_attack_mod
+unit_is_magical
+unit_starting_fatigue_state
+upkeep_mod
+vampiric_mercenary_recruitment_capacity
+xp_gain_rate_mod

@@ -1,0 +1,7 @@
+Logichammer: Scripture
+
+Mod intends to provide players faction names that will develop in accordance with their Legendary Lord, culture, and campaign progression.
+
+For instance, Kostaltyn of Kislev is leader of the Cult of Ursun and unofficial leader of the Great Orthodoxy. Could he have a mod-made questline
+which leads to him becoming the official Great Orthodoxy leader? Perhaps Kostaltyn needs to weave Kislevite politics to succeed Tsar power with
+religious power, or use religious power to increase Tsar power.
